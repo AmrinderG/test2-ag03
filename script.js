@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Function to Fetch All Master Tags
 function fetchMasterTagList() {
-    fetch("https://capstone-backend-abew.onrender.com/master-tag-list") // ✅ Updated URL
+    fetch(index.html) // ✅ Updated URL
         .then(response => response.json())
         .then(data => {
             displayTags(data);
