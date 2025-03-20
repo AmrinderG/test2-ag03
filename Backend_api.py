@@ -5,13 +5,16 @@ from flask_cors import CORS
 import sqlite3
 import os
 
+from github import Github
+g = Github('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')
+repo = g.get_repo('test-ag03')
+
 app = Flask(__name__)
 CORS(app)
 
 # Connect to the SQLite database
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATABASE = os.path.join(BASE_DIR, "project_database.db")
+DATABASE = repo.get_contents('project_database.db').decoded_content
 
 
 def get_db_connection():
@@ -55,7 +58,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Connect to the SQLite database
-DATABASE = "C:/Users/harsh/OneDrive - UBC/4th year FILES/ENGR 499 - CAPSTONE/project_database.db"
+DATABASE = repo.get_contents('project_database.db').decoded_content
 
 
 def get_db_connection():
