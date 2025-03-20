@@ -4,7 +4,7 @@ g = Github('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')
 repo = g.get_repo('test-ag03')
 setup_file = repo.get_contents("database_setup.py)
 
-if [ ! -f "/opt/render/project/src/project_database.db" ]; then
+if [ ! -f setup_file ]; then
     echo "Database file not found, creating..."
     python setup.file
 fi
