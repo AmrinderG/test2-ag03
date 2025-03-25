@@ -1,10 +1,11 @@
+
 document.addEventListener("DOMContentLoaded", function () {
     fetchMasterTagList();
 });
 
 // Function to Fetch All Master Tags
 function fetchMasterTagList() {
-    fetch("https://capstone-backend-abew.onrender.com/master-tag-list") // ✅ Updated URL
+    fetch("https://github.com/AmrinderG/test-ag03/raw/refs/heads/main/index.html") // ✅ Updated URL
         .then(response => response.json())
         .then(data => {
             displayTags(data);
