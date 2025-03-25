@@ -1,8 +1,9 @@
 import pandas as pd
 from rapidfuzz import fuzz, process
+import requests
 
 # Load the mock database (replace with the correct path to your file)
-file_path = r"C:\Users\harsh\OneDrive - UBC\4th year FILES\ENGR 499 - CAPSTONE\Mock_Central_Equipment_List.xlsx"
+file_path = requests.get('https://github.com/AmrinderG/test-ag03/raw/refs/heads/main/Mock_Central_Equipment_List.xlsx')
 df = pd.read_excel(file_path)
 
 
