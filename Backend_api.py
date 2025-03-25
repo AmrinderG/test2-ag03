@@ -4,14 +4,14 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_cors import CORS
 import sqlite3
 import os
+import requests
 
 app = Flask(__name__)
 CORS(app)
 
 # Connect to the SQLite database
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATABASE = os.path.join(BASE_DIR, "project_database.db")
+DATABASE = requests.get('https://github.com/AmrinderG/test-ag03/raw/refs/heads/main/project_database.db')
 
 
 def get_db_connection():
@@ -55,7 +55,7 @@ app = Flask(__name__)
 CORS(app)
 
 # Connect to the SQLite database
-DATABASE = "C:/Users/harsh/OneDrive - UBC/4th year FILES/ENGR 499 - CAPSTONE/project_database.db"
+DATABASE = requests.get('https://github.com/AmrinderG/test-ag03/raw/refs/heads/main/project_database.db')
 
 
 def get_db_connection():

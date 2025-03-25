@@ -1,6 +1,7 @@
 import sqlite3
+import requests
 
-DATABASE_FILE = "project_database.db"
+DATABASE_FILE = requests.get('https://github.com/AmrinderG/test-ag03/raw/refs/heads/main/project_database.db')
 
 conn = sqlite3.connect(DATABASE_FILE)
 cursor = conn.cursor()
